@@ -1,0 +1,567 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+	<head>
+		<title>Amel SEKOUANE — Cybersécurité & Blue Team</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+		<style>
+			:root {
+				--navy:   #0B2239;
+				--teal:   #0891B2;
+				--teal2:  #06B6D4;
+				--dark:   #0d1b2a;
+				--mid:    #1e3a50;
+				--text:   #cbd5e1;
+				--muted:  #64748b;
+				--white:  #f0f9ff;
+				--accent: #22d3ee;
+			}
+
+			* { box-sizing: border-box; }
+
+			body, input, textarea, select {
+				font-family: 'DM Sans', sans-serif !important;
+				color: var(--text) !important;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				font-family: 'Space Mono', monospace !important;
+				color: var(--white) !important;
+				letter-spacing: -0.02em;
+			}
+
+			a { color: var(--teal2) !important; }
+			a:hover { color: var(--accent) !important; }
+
+			/* SIDEBAR */
+			#header {
+				background: var(--navy) !important;
+				border-right: 1px solid rgba(8,145,178,0.2) !important;
+			}
+
+			#header > header {
+				border-bottom: 1px solid rgba(8,145,178,0.15) !important;
+				padding-bottom: 2rem !important;
+			}
+
+			#header h1 a {
+				font-family: 'Space Mono', monospace !important;
+				font-size: 1.1rem !important;
+				color: var(--white) !important;
+				letter-spacing: 0.05em;
+			}
+
+			#header > header > p {
+				font-size: 0.78rem !important;
+				color: var(--teal2) !important;
+				line-height: 1.6;
+				font-family: 'Space Mono', monospace !important;
+			}
+
+			#header .image.avatar {
+				width: 90px !important;
+				height: 90px !important;
+				margin-bottom: 1rem !important;
+			}
+
+			#header .image.avatar img {
+				border: 2px solid var(--teal) !important;
+				border-radius: 50% !important;
+			}
+
+			#nav ul li a {
+				font-family: 'Space Mono', monospace !important;
+				font-size: 0.7rem !important;
+				text-transform: uppercase !important;
+				letter-spacing: 0.12em !important;
+				color: var(--muted) !important;
+				border-left: 2px solid transparent !important;
+				padding-left: 1rem !important;
+				transition: all 0.2s ease !important;
+			}
+
+			#nav ul li a:hover, #nav ul li a.active {
+				color: var(--accent) !important;
+				border-left-color: var(--accent) !important;
+			}
+
+			#header footer .icons li a { color: var(--muted) !important; transition: color 0.2s !important; }
+			#header footer .icons li a:hover { color: var(--accent) !important; }
+
+			/* MAIN */
+			#wrapper { background: var(--dark) !important; }
+			#main > section { border-top: 1px solid rgba(8,145,178,0.1) !important; }
+
+			.image.main { max-height: 200px !important; overflow: hidden !important; position: relative; }
+			.image.main::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background: linear-gradient(135deg, rgba(11,34,57,0.75) 0%, rgba(8,145,178,0.1) 100%);
+				pointer-events: none;
+			}
+			.image.main img { filter: brightness(0.45) saturate(0.5) hue-rotate(185deg); object-fit: cover; width: 100%; }
+
+			h3 {
+				font-size: 0.75rem !important;
+				text-transform: uppercase !important;
+				letter-spacing: 0.18em !important;
+				color: var(--teal2) !important;
+				border-bottom: 1px solid rgba(8,145,178,0.2) !important;
+				padding-bottom: 0.6rem !important;
+				margin-bottom: 1.4rem !important;
+			}
+
+			h2 { font-size: 1.5rem !important; }
+
+			/* ABOUT GRID */
+			.about-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 0.9rem;
+				margin-top: 1.4rem;
+			}
+
+			.info-pill {
+				background: rgba(8,145,178,0.07);
+				border: 1px solid rgba(8,145,178,0.18);
+				border-radius: 6px;
+				padding: 0.7rem 1rem;
+				font-size: 0.8rem;
+				line-height: 1.55;
+			}
+
+			.info-pill strong {
+				display: block;
+				font-family: 'Space Mono', monospace;
+				font-size: 0.62rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				color: var(--teal2);
+				margin-bottom: 0.25rem;
+			}
+
+			/* OBJECTIVE */
+			.objective-banner {
+				background: linear-gradient(135deg, rgba(8,145,178,0.1), rgba(11,34,57,0.35));
+				border: 1px solid rgba(8,145,178,0.22);
+				border-radius: 8px;
+				padding: 0.9rem 1.3rem;
+				margin-top: 1.1rem;
+				font-size: 0.84rem;
+				line-height: 1.6;
+			}
+
+			.obj-label {
+				font-family: 'Space Mono', monospace;
+				font-size: 0.62rem;
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				color: var(--teal2);
+				display: block;
+				margin-bottom: 0.25rem;
+			}
+
+			/* SKILL BLOCKS */
+			.skill-block {
+				margin-bottom: 0.9rem;
+				padding: 0.8rem 1rem 0.8rem 1.1rem;
+				border-left: 2px solid var(--teal);
+				background: rgba(8,145,178,0.04);
+				border-radius: 0 6px 6px 0;
+				transition: border-color 0.2s, background 0.2s;
+			}
+			.skill-block:hover { border-left-color: var(--accent); background: rgba(8,145,178,0.09); }
+			.skill-label { font-family: 'Space Mono', monospace; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.09em; color: var(--white); margin-bottom: 0.28rem; }
+			.skill-detail { font-size: 0.81rem; color: var(--muted); line-height: 1.5; }
+
+			/* PROJECT CARDS */
+			.project-card {
+				background: rgba(14,30,45,0.8);
+				border: 1px solid rgba(8,145,178,0.13);
+				border-radius: 8px;
+				padding: 1.2rem 1.4rem;
+				margin-bottom: 1rem;
+				transition: border-color 0.22s, transform 0.18s;
+				position: relative;
+				overflow: hidden;
+			}
+			.project-card::before {
+				content: '';
+				position: absolute;
+				top: 0; left: 0;
+				width: 3px; height: 100%;
+				background: linear-gradient(180deg, var(--teal), var(--accent));
+				opacity: 0;
+				transition: opacity 0.22s;
+			}
+			.project-card:hover { border-color: rgba(8,145,178,0.38); transform: translateX(3px); }
+			.project-card:hover::before { opacity: 1; }
+			.project-card h4 { font-family: 'Space Mono', monospace !important; font-size: 0.88rem !important; color: var(--white) !important; margin: 0 0 0.45rem !important; }
+			.project-card p { font-size: 0.81rem; color: var(--muted); margin: 0 0 0.75rem; line-height: 1.6; }
+
+			.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+			.tag {
+				font-family: 'Space Mono', monospace;
+				font-size: 0.62rem;
+				padding: 0.18rem 0.5rem;
+				border: 1px solid rgba(8,145,178,0.3);
+				border-radius: 3px;
+				color: var(--teal2);
+				text-transform: uppercase;
+				letter-spacing: 0.04em;
+			}
+
+			/* CERTIFICATIONS */
+			.cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+			.cert-item {
+				display: flex;
+				align-items: flex-start;
+				gap: 0.65rem;
+				padding: 0.75rem;
+				background: rgba(8,145,178,0.05);
+				border: 1px solid rgba(8,145,178,0.11);
+				border-radius: 6px;
+				font-size: 0.8rem;
+				line-height: 1.4;
+			}
+			.cert-icon { font-size: 1rem; flex-shrink: 0; margin-top: 0.05rem; }
+			.cert-name { color: var(--white); font-weight: 500; }
+			.cert-status { font-family: 'Space Mono', monospace; font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 0.18rem; }
+			.cert-item.obtained { border-color: rgba(34,211,238,0.22); }
+			.cert-item.obtained .cert-status { color: var(--accent); }
+			.cert-item.inprogress .cert-status { color: var(--muted); }
+
+			/* TERMINAL TAGS */
+			.terminal-tag {
+				display: inline-block;
+				font-family: 'Space Mono', monospace;
+				font-size: 0.68rem;
+				color: var(--accent);
+				background: rgba(34,211,238,0.07);
+				border: 1px solid rgba(34,211,238,0.18);
+				padding: 0.15rem 0.5rem;
+				border-radius: 3px;
+				margin-right: 0.35rem;
+				margin-bottom: 0.35rem;
+			}
+
+			/* FORM */
+			input[type="text"], input[type="email"], textarea {
+				background: rgba(8,145,178,0.06) !important;
+				border: 1px solid rgba(8,145,178,0.18) !important;
+				border-radius: 6px !important;
+				color: var(--text) !important;
+			}
+			input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+				border-color: var(--teal) !important;
+				outline: none !important;
+			}
+			input[type="submit"].primary {
+				background: var(--teal) !important;
+				border-color: var(--teal) !important;
+				font-family: 'Space Mono', monospace !important;
+				font-size: 0.72rem !important;
+				text-transform: uppercase !important;
+				letter-spacing: 0.1em !important;
+				border-radius: 4px !important;
+			}
+			input[type="submit"].primary:hover { background: var(--accent) !important; border-color: var(--accent) !important; }
+
+			/* FOOTER */
+			#footer { background: var(--navy) !important; border-top: 1px solid rgba(8,145,178,0.12) !important; }
+
+			@media (max-width: 736px) { .about-grid, .cert-grid { grid-template-columns: 1fr; } }
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<section id="header">
+			<header>
+				<span class="image avatar"><img src="images/avatar.jpg" alt="Amel SEKOUANE" /></span>
+				<h1 id="logo"><a href="#">Amel SEKOUANE</a></h1>
+				<p>M1 Cybersécurité<br />
+				Grenoble Alpes<br />
+				<span style="color:var(--accent);font-size:0.7rem;">Blue Team &amp; Sécurité Cloud</span></p>
+			</header>
+			<nav id="nav">
+				<ul>
+					<li><a href="#about" class="active">À propos</a></li>
+					<li><a href="#skills">Compétences</a></li>
+					<li><a href="#projects">Projets</a></li>
+					<li><a href="#experience">Expériences</a></li>
+					<li><a href="#certifications">Certifications</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<footer>
+				<ul class="icons">
+					<li><a href="https://github.com/Amel-Codes" class="icon brands fa-github"><span class="label">Github</span></a></li>
+					<li><a href="https://linkedin.com/in/amel-sekouane-b2897a254" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:amelsekouane003@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+		</section>
+
+		<div id="wrapper">
+			<div id="main">
+
+				<!-- ABOUT -->
+				<section id="about">
+					<div class="image main" data-position="center">
+						<img src="images/banner.jpg" alt="" />
+					</div>
+					<div class="container">
+						<header class="major">
+							<h2>Amel SEKOUANE</h2>
+							<p style="font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--teal2);letter-spacing:0.04em;">
+								M1 Informatique &nbsp;·&nbsp; Cybersécurité &amp; Réseaux &nbsp;·&nbsp; Grenoble Alpes
+							</p>
+						</header>
+						<p style="font-size:0.88rem;line-height:1.8;color:var(--text);">
+							Étudiante en Master Cybersécurité à l'Université Grenoble Alpes, passionnée par la sécurité défensive et l'analyse de menaces.
+							Mon parcours mêle une solide formation académique (top 20 % en Licence), des projets techniques concrets — déploiement IDS sur réseau réel, simulation d'attaques, cryptographie from scratch —
+							et une curiosité qui me pousse à comprendre les systèmes en profondeur, pas juste à suivre des tutoriels.
+						</p>
+						<div class="objective-banner">
+							<span class="obj-label">Objectif moyen terme</span>
+							Ingénieure Sécurité Cloud &amp; Blue Team — SOC, SIEM, détection, réponse à incident
+						</div>
+						<div class="about-grid">
+							<div class="info-pill">
+								<strong>Alternance recherchée</strong>
+								Grenoble &amp; alentours — 1 an<br/>
+								Début : Septembre 2026<br/>
+								Rythme : 3 sem. entreprise / 1 sem. formation
+							</div>
+							<div class="info-pill">
+								<strong>Formation</strong>
+								Master Cybersécurité — Univ. Grenoble Alpes<br/>
+								Licence Informatique — Top 20 %<br/>
+								Cycle prépa ingénieurs — ESI Algérie
+							</div>
+							<div class="info-pill">
+								<strong>Langues</strong>
+								Arabe C2 &nbsp;·&nbsp; Français C1<br/>
+								Anglais B2 &nbsp;·&nbsp; Turc B2
+							</div>
+							<div class="info-pill">
+								<strong>Contact</strong>
+								+33 7 49 80 27 42<br/>
+								amelsekouane003@gmail.com
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- SKILLS -->
+				<section id="skills">
+					<div class="container">
+						<h3>Compétences Techniques</h3>
+						<div class="skill-block">
+							<div class="skill-label">Sécurité systèmes &amp; réseaux</div>
+							<div class="skill-detail">Linux · Wireshark · TCP/IP · VLAN · VPN · TLS/SSH · IDS/IPS (Suricata, Snort, Zeek) · Nmap · FFUF</div>
+						</div>
+						<div class="skill-block">
+							<div class="skill-label">Sécurité offensive</div>
+							<div class="skill-detail">OWASP Top 10 · XSS · Scapy · Hack The Box (actif) · WebGoat · Tests de pénétration web</div>
+						</div>
+						<div class="skill-block">
+							<div class="skill-label">Cryptographie</div>
+							<div class="skill-detail">AES · RSA (from scratch) · PKI · X.509 · OpenPGP · Fonctions de hachage (Merkle–Damgård)</div>
+						</div>
+						<div class="skill-block">
+							<div class="skill-label">Cloud &amp; Sécurité Cloud</div>
+							<div class="skill-detail">AWS — IAM · VPC · S3 · CloudTrail · GuardDuty &nbsp;·&nbsp; Préparation AWS CCP &amp; Security Specialty</div>
+						</div>
+						<div class="skill-block">
+							<div class="skill-label">Programmation</div>
+							<div class="skill-detail">Python · C/C++ · Java · Bash · Node.js · Vue.js · MySQL · MongoDB</div>
+						</div>
+						<div class="skill-block">
+							<div class="skill-label">Systèmes embarqués &amp; électronique</div>
+							<div class="skill-detail">Arduino · GCM · VHDL · Proteus · Conception de circuits · Programmation bas niveau</div>
+						</div>
+						<div class="skill-block">
+							<div class="skill-label">DevOps &amp; Administration</div>
+							<div class="skill-detail">Docker · VM Ubuntu · GLPI · Git/GitLab · CI/CD · Agile/Scrum</div>
+						</div>
+
+						<h3 style="margin-top:2rem;">Savoir-être</h3>
+						<div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.4rem;">
+							<span class="terminal-tag">Communication claire</span>
+							<span class="terminal-tag">Multi-sujets sans panique</span>
+							<span class="terminal-tag">Travail en équipe</span>
+							<span class="terminal-tag">Rigueur &amp; organisation</span>
+							<span class="terminal-tag">Résistance à la pression</span>
+							<span class="terminal-tag">Curiosité active</span>
+						</div>
+					</div>
+				</section>
+
+				<!-- PROJECTS -->
+				<section id="projects">
+					<div class="container">
+						<h3>Projets</h3>
+
+						<div class="project-card">
+							<h4>Déploiement IDS — Mission bénévole (Togo)</h4>
+							<p>Déploiement et configuration de Suricata sur un réseau local réel. Détection d'activités suspectes via scénarios d'attaque (scan, brute force). Visualisation des logs avec ELK Stack / Grafana et rédaction de rapports de sécurité.</p>
+							<div class="tags">
+								<span class="tag">Suricata</span><span class="tag">ELK Stack</span><span class="tag">Grafana</span><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">Linux</span>
+							</div>
+						</div>
+
+						<div class="project-card">
+							<h4>Simulation d'infrastructure réseau type FAI (3 VMs)</h4>
+							<p>Architecture réseau virtualisée client/box/FAI. Interface de gestion complète : DHCP, DNS, contrôle parental, mesure de débit.</p>
+							<div class="tags">
+								<span class="tag">Linux</span><span class="tag">Bash</span><span class="tag">Apache</span><span class="tag">PHP</span><span class="tag">DHCP</span><span class="tag">DNS</span>
+							</div>
+						</div>
+
+						<div class="project-card">
+							<h4>Architecture réseau sécurisée (Cisco PT / Linux / FreeBSD)</h4>
+							<p>Conception et administration complète d'une infrastructure réseau : VLAN, IPv6, adressage IP, routage, DNS, QoS et gestion des tables de routage.</p>
+							<div class="tags">
+								<span class="tag">Cisco PT</span><span class="tag">FreeBSD</span><span class="tag">VLAN</span><span class="tag">IPv6</span><span class="tag">QoS</span>
+							</div>
+						</div>
+
+						<div class="project-card">
+							<h4>Cryptographie &amp; sécurité des données (from scratch)</h4>
+							<p>Implémentation RSA 2048 bits en Python sans bibliothèques externes (Montgomery multiplication). PKI complète : certificats X.509, signatures numériques, chaîne de confiance. Étude et simulation d'attaques sur fonctions de hachage (Merkle–Damgård, collisions, seconde préimage).</p>
+							<div class="tags">
+								<span class="tag">Python</span><span class="tag">RSA</span><span class="tag">PKI</span><span class="tag">X.509</span><span class="tag">GPG</span>
+							</div>
+						</div>
+
+						<div class="project-card">
+							<h4>Simulation MITM (Home Lab)</h4>
+							<p>ARP spoofing, interception HTTPS et analyse du trafic TLS. Étude des mécanismes de protection et des vecteurs d'attaque man-in-the-middle.</p>
+							<div class="tags">
+								<span class="tag">Scapy</span><span class="tag">Wireshark</span><span class="tag">ARP</span><span class="tag">TLS</span>
+							</div>
+						</div>
+
+						<div class="project-card">
+							<h4>Labs CTF — HTB / WebGoat / Gandalf</h4>
+							<p>Exploitation de vulnérabilités OWASP Top 10 sur WebGoat/WebWolf. Machines actives et challenges réseau sur Hack The Box (profil actif). Challenges de sécurité liés aux systèmes IA (Gandalf).</p>
+							<div class="tags">
+								<span class="tag">HackTheBox</span><span class="tag">WebGoat</span><span class="tag">OWASP</span><span class="tag">CTF</span>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- EXPERIENCE -->
+				<section id="experience">
+					<div class="container">
+						<h3>Expériences</h3>
+
+						<div class="project-card">
+							<h4>Stage Déploiement IDS — Association AJVDEC, Togo &nbsp;<span style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--teal2);font-weight:400;">1,5 mois · En cours</span></h4>
+							<p>Mission bénévole de déploiement d'une solution de détection d'intrusion sur réseau local réel pour une association humanitaire et tech.</p>
+						</div>
+
+						<div class="project-card">
+							<h4>Stage Optimisation réseau — Projet EMC2, Labo UMR ESPACE &nbsp;<span style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--teal2);font-weight:400;">2 mois</span></h4>
+							<p>Analyse et modélisation de flux réseau urbain, algorithmes de routage (RO, QGIS). Réflexion sur la résilience et la segmentation des infrastructures réseau.</p>
+						</div>
+
+						<div class="project-card">
+							<h4>Entrepreneuriat — 24H pour entreprendre &nbsp;<span style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--teal2);font-weight:400;">2024 &amp; 2025</span></h4>
+							<p>Conception et pitch d'un projet innovant en équipe sous contrainte de temps. <strong style="color:var(--accent);">🏆 Prix Coup de Cœur — édition 2024.</strong></p>
+						</div>
+
+						<div class="project-card">
+							<h4>Service à la personne &nbsp;<span style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--teal2);font-weight:400;">2022 – présent</span></h4>
+							<p>Aide informatique avancée à domicile et soutien scolaire en mathématiques et informatique.</p>
+						</div>
+					</div>
+				</section>
+
+				<!-- CERTIFICATIONS -->
+				<section id="certifications">
+					<div class="container">
+						<h3>Certifications</h3>
+						<div class="cert-grid">
+							<div class="cert-item inprogress">
+								<div class="cert-icon">☁️</div>
+								<div><div class="cert-name">AWS Cloud Practitioner</div><div class="cert-status">Préparation active</div></div>
+							</div>
+							<div class="cert-item inprogress">
+								<div class="cert-icon">🔒</div>
+								<div><div class="cert-name">AWS Security Specialty</div><div class="cert-status">Objectif 2026</div></div>
+							</div>
+							<div class="cert-item inprogress">
+								<div class="cert-icon">⚔️</div>
+								<div><div class="cert-name">eJPT — INE Security</div><div class="cert-status">En cours</div></div>
+							</div>
+							<div class="cert-item obtained">
+								<div class="cert-icon">✅</div>
+								<div><div class="cert-name">Intro to Cybersecurity — Cisco</div><div class="cert-status">Obtenue</div></div>
+							</div>
+							<div class="cert-item obtained">
+								<div class="cert-icon">✅</div>
+								<div><div class="cert-name">LanguageCert English B2</div><div class="cert-status">Obtenue</div></div>
+							</div>
+							<div class="cert-item inprogress">
+								<div class="cert-icon">🐍</div>
+								<div><div class="cert-name">Python &amp; Ethical Hacking — Udemy</div><div class="cert-status">En cours</div></div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- CONTACT -->
+				<section id="contact">
+					<div class="container">
+						<h3>Contact</h3>
+						<p style="font-size:0.85rem;color:var(--muted);">
+							Disponible pour une alternance à Grenoble &amp; alentours à partir de septembre 2026.<br/>
+							N'hésitez pas à me contacter pour toute opportunité ou collaboration.
+						</p>
+						<form method="post" action="#">
+							<div class="row gtr-uniform">
+								<div class="col-6 col-12-xsmall"><input type="text" name="name" placeholder="Nom" /></div>
+								<div class="col-6 col-12-xsmall"><input type="email" name="email" placeholder="Email" /></div>
+								<div class="col-12"><input type="text" name="subject" placeholder="Sujet" /></div>
+								<div class="col-12"><textarea name="message" placeholder="Message" rows="5"></textarea></div>
+								<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" class="primary" value="Envoyer" /></li>
+										<li><input type="reset" value="Effacer" /></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+			</div>
+
+			<section id="footer">
+				<div class="container">
+					<ul class="copyright">
+						<li style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--muted);">
+							Amel SEKOUANE &copy; 2025 &nbsp;·&nbsp; Design adapté de <a href="http://html5up.net">HTML5 UP</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
