@@ -1,9 +1,10 @@
 <!DOCTYPE HTML>
 <html lang="fr">
 	<head>
-		<title>Amel SEKOUANE - Cybersécurité & Blue Team</title>
+		<title>Amel SEKOUANE - Cybersécurité, détection et conformité</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Amel SEKOUANE, étudiante en M2 Cybersécurité et informatique légale (Université Grenoble Alpes), ingénieure cybersécurité en alternance chez Stäubli Robotics." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -202,6 +203,9 @@
 			.project-card:hover::before { opacity: 1; }
 			.project-card h4 { font-family: 'Space Mono', monospace !important; font-size: 0.88rem !important; color: var(--white) !important; margin: 0 0 0.45rem !important; }
 			.project-card p { font-size: 0.81rem; color: var(--muted); margin: 0 0 0.75rem; line-height: 1.6; }
+			.project-card ul { font-size: 0.81rem; color: var(--muted); line-height: 1.6; margin: 0 0 0.75rem; padding-left: 1.1rem; }
+			.project-card ul li { margin-bottom: 0.25rem; }
+			.job-meta { font-family: 'Space Mono', monospace; font-size: 0.68rem; color: var(--teal2); font-weight: 400; }
 
 			.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 			.tag {
@@ -260,16 +264,6 @@
 				border-color: var(--teal) !important;
 				outline: none !important;
 			}
-			input[type="submit"].primary {
-				background: var(--teal) !important;
-				border-color: var(--teal) !important;
-				font-family: 'Space Mono', monospace !important;
-				font-size: 0.72rem !important;
-				text-transform: uppercase !important;
-				letter-spacing: 0.1em !important;
-				border-radius: 4px !important;
-			}
-			input[type="submit"].primary:hover { background: var(--accent) !important; border-color: var(--accent) !important; }
 
 			/* FOOTER */
 			#footer { background: var(--navy) !important; border-top: 1px solid rgba(8,145,178,0.12) !important; }
@@ -283,16 +277,16 @@
 			<header>
 				<span class="image avatar"><img src="images/avatar.jpg" alt="Amel SEKOUANE" /></span>
 				<h1 id="logo"><a href="#">Amel SEKOUANE</a></h1>
-				<p>M1 Cybersécurité<br />
-				Grenoble Alpes<br />
-				<span style="color:var(--accent);font-size:0.7rem;">Blue Team, Sécurité Cloud &amp; IoT </span></p>
+				<p>M2 Cybersécurité &amp; Informatique légale<br />
+				Université Grenoble Alpes<br />
+				<span style="color:var(--accent);font-size:0.7rem;">Ingénieure cybersécurité en alternance, Stäubli Robotics</span></p>
 			</header>
 			<nav id="nav">
 				<ul>
 					<li><a href="#about" class="active">À propos</a></li>
+					<li><a href="#experience">Expériences</a></li>
 					<li><a href="#skills">Compétences</a></li>
 					<li><a href="#projects">Projets</a></li>
-					<li><a href="#experience">Expériences</a></li>
 					<li><a href="#certifications">Certifications</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
@@ -318,43 +312,95 @@
 						<header class="major">
 							<h2>Amel SEKOUANE</h2>
 							<p style="font-family:'Space Mono',monospace;font-size:0.78rem;color:var(--teal2);letter-spacing:0.04em;">
-								Master Cybersécurité et Informatique Légale &nbsp;·&nbsp; Université de Grenoble Alpes
+								Analyste cybersécurité &nbsp;·&nbsp; Détection, vulnérabilités et conformité
 							</p>
 						</header>
 						<p style="font-size:0.88rem;line-height:1.8;color:var(--text);">
-							Étudiante en Master Cybersécurité à l'Université Grenoble Alpes, je me spécialise 
-							en sécurité défensive, Cloud Security et systèmes embarqués/IoT, avec pour objectif 
-							de devenir ingénieure en cybersécurité défensive. Mon parcours allie rigueur académique, 
-							projets techniques menés de bout en bout et une curiosité qui me pousse à comprendre 
-							les systèmes en profondeur, pas juste à appliquer des solutions toutes faites.
+							Étudiante en M2 Cybersécurité et informatique légale à l'Université Grenoble Alpes et ingénieure
+							cybersécurité en alternance chez Stäubli Robotics, je pratique au quotidien l'analyse de vulnérabilités,
+							la conformité aux normes (IEC 62443, Cyber Resilience Act) et la sécurisation d'équipements industriels.
+							J'ai aussi déployé et exploité des IDS/IPS (Suricata) avec visualisation des alertes dans ELK.
+							Bilingue français-anglais, rigoureuse et à l'aise sous pression.
 						</p>
 						<div class="objective-banner">
-							<span class="obj-label">Objectif moyen terme</span>		
-								Ingénieure Cybersécurité Défensive : Cloud Security · IoT/Embarqué
+							<span class="obj-label">Objectif</span>
+							Analyste puis ingénieure en cybersécurité défensive : détection, réponse aux incidents et gestion des vulnérabilités
 						</div>
 						<div class="about-grid">
 							<div class="info-pill">
-								<strong>Alternance recherchée</strong>
-								Grenoble &amp; alentours - 1 an<br/>
-								Début : Septembre 2026<br/>
-								Rythme : 3 sem. entreprise / 1 sem. formation
+								<strong>Poste actuel</strong>
+								Ingénieure cybersécurité – Robotique (alternance)<br/>
+								Stäubli Robotics, Faverges<br/>
+								Septembre 2026 – septembre 2027
+							</div>
+							<div class="info-pill">
+								<strong>Disponibilité</strong>
+								CDI à partir de septembre 2027<br/>
+								France ou Canada (admissible à la Mobilité francophone)
 							</div>
 							<div class="info-pill">
 								<strong>Formation</strong>
-								Master Cybersécurité - Univ. Grenoble Alpes - Top 15 %<br/>
+								M2 Cybersécurité &amp; Informatique légale - Univ. Grenoble Alpes - Top 15 %<br/>
 								Licence Informatique - Univ. Avignon - Top 20 %<br/>
 								Cycle préparatoire d'ingénieurs - ESI Algérie
 							</div>
 							<div class="info-pill">
 								<strong>Langues</strong>
-								Français C1 &nbsp;·&nbsp; Anglais B2<br/>
-								Arabe C2 &nbsp;·&nbsp; Turc B2
+								Français C1 &nbsp;·&nbsp; Anglais C1<br/>
+								Arabe (maternelle) &nbsp;·&nbsp; Turc B2
 							</div>
-							<div class="info-pill">
-								<strong>Contact</strong>
-								+33 7 49 80 27 42<br/>
-								amelsekouane003@gmail.com
+						</div>
+					</div>
+				</section>
+
+				<!-- EXPERIENCE -->
+				<section id="experience">
+					<div class="container">
+						<h3>Expériences</h3>
+
+						<div class="project-card">
+							<h4>Ingénieure cybersécurité – Robotique (alternance) &nbsp;<span class="job-meta">Sept. 2026 – sept. 2027</span></h4>
+							<p>Stäubli Robotics, R&amp;D Logiciels embarqués · Faverges, France</p>
+							<ul>
+								<li>Analyse des exigences de cybersécurité (IEC 62443-4-1 et 4-2, Cyber Resilience Act, Règlement Machines, EN 50742) et identification des écarts sur le logiciel embarqué du contrôleur robot CS9 (Linux Debian temps réel), puis mise en œuvre des corrections.</li>
+								<li>Travail au sein d'une équipe soumise au dispositif de réponse rapide aux vulnérabilités exigé par le CRA : le scan automatisé que je contribue à mettre en place alimente ce processus.</li>
+								<li>Durcissement du contrôleur : règles de pare-feu Linux en entrée et en sortie, contrôle d'accès aux services et aux interfaces réseau.</li>
+								<li>Scans de vulnérabilités authentifiés avec OpenVAS en conditions OT maîtrisées, évaluation comparative de scanners (OpenVAS, Nessus, Nexpose) et intégration dans une chaîne CI Jenkins.</li>
+								<li>Suivi des vulnérabilités produit (veille CERT-FR, analyse d'impact des CVE) et participation à une analyse de risques TARA par zones et conduits.</li>
+							</ul>
+							<div class="tags">
+								<span class="tag">IEC 62443</span><span class="tag">CRA</span><span class="tag">OpenVAS</span><span class="tag">Jenkins</span><span class="tag">Linux</span><span class="tag">C++</span><span class="tag">TARA</span>
 							</div>
+						</div>
+
+						<div class="project-card">
+							<h4>Stage – Déploiement IDS/IPS &nbsp;<span class="job-meta">Mai – juin 2026</span></h4>
+							<p>Association AJVDEC, mission bénévole · Togo</p>
+							<ul>
+								<li>Déploiement et configuration de Suricata sur le réseau local réel de l'association, création et ajustement de règles de détection.</li>
+								<li>Simulation de scénarios d'attaque (scan, brute force) pour valider la détection d'activités suspectes.</li>
+								<li>Centralisation et visualisation des alertes avec ELK Stack et Grafana, rédaction de rapports de sécurité.</li>
+							</ul>
+							<div class="tags">
+								<span class="tag">Suricata</span><span class="tag">ELK Stack</span><span class="tag">Grafana</span><span class="tag">Wireshark</span><span class="tag">Nmap</span>
+							</div>
+						</div>
+
+						<div class="project-card">
+							<h4>Stage – Optimisation réseau (projet EMC2) &nbsp;<span class="job-meta">2 mois</span></h4>
+							<p>Laboratoire UMR ESPACE · Avignon, France</p>
+							<p>Analyse et modélisation de flux réseau, algorithmes de routage. Réflexion sur la résilience et la segmentation des infrastructures réseau.</p>
+						</div>
+
+						<div class="project-card">
+							<h4>Assistance informatique à domicile &nbsp;<span class="job-meta">2022 – aujourd'hui</span></h4>
+							<p>Micro-entreprise · France</p>
+							<p>Dépannage, configuration et sécurisation de postes et de réseaux domestiques pour des particuliers.</p>
+						</div>
+
+						<div class="project-card">
+							<h4>Entrepreneuriat – 24 h pour entreprendre &nbsp;<span class="job-meta">2024 &amp; 2025</span></h4>
+							<p>Conception et pitch d'un projet innovant en équipe sous contrainte de temps. <strong style="color:var(--accent);">Prix Coup de cœur, édition 2024.</strong></p>
 						</div>
 					</div>
 				</section>
@@ -362,48 +408,51 @@
 				<!-- SKILLS -->
 				<section id="skills">
 					<div class="container">
-						<h3>Compétences Techniques</h3>
+						<h3>Compétences techniques</h3>
 						<div class="skill-block">
-							<div class="skill-label">Sécurité défensive &amp; Blue Team</div>
-							<div class="skill-detail">IDS/IPS (Suricata, Snort, Zeek) · ELK Stack · Grafana · Analyse de logs · Détection d'intrusion · Réponse à incident</div>
+							<div class="skill-label">Pare-feu</div>
+							<div class="skill-detail">Pare-feu Linux (iptables, nftables : règles entrée/sortie, NAT, filtrage par service) · Pare-feu et ACL Cisco</div>
 						</div>
 						<div class="skill-block">
-							<div class="skill-label">Sécurité offensive &amp; Pentest</div>
-							<div class="skill-detail">OWASP Top 10 · XSS · SQLi · ARP spoofing · MITM · Scapy · Nmap · FFUF · Hack The Box (actif) · WebGoat</div>
+							<div class="skill-label">Détection et réponse</div>
+							<div class="skill-detail">IDS/IPS (Suricata, Snort, Zeek) · SIEM ELK Stack · Grafana · Tri d'alertes · Analyse de logs · Wireshark</div>
 						</div>
 						<div class="skill-block">
-							<div class="skill-label">Réseaux &amp; Administration</div>
-							<div class="skill-detail">TCP/IP · VLAN · VPN · DNS · DHCP · QoS · IPv6 · Routage (OSPF) · Segmentation · Pare-feu · iptables · Wireshark · Cisco PT · FreeBSD · Linux </div>
+							<div class="skill-label">Gestion des vulnérabilités</div>
+							<div class="skill-detail">OpenVAS · Nessus · Nexpose · Nmap · FFUF · Veille CVE et CERT-FR · Scans authentifiés en environnement OT</div>
 						</div>
 						<div class="skill-block">
-							<div class="skill-label">Cryptographie &amp; PKI</div>
-							<div class="skill-detail">AES · RSA (from scratch, Montgomery) · PKI · X.509 · OpenPGP · TLS/SSH · Signatures numériques · Fonctions de hachage (Merkle–Damgård)</div>
+							<div class="skill-label">Réseaux</div>
+							<div class="skill-detail">TCP/IP · VLAN · Routage (OSPF) · IPv6 · DNS · DHCP · QoS · VPN · Segmentation · Cisco Packet Tracer · FreeBSD</div>
 						</div>
 						<div class="skill-block">
-							<div class="skill-label">Cloud &amp; Sécurité Cloud</div>
-							<div class="skill-detail">AWS - IAM · VPC · S3 · CloudTrail · GuardDuty &nbsp;·&nbsp; Préparation AWS CCP &amp; Security Specialty</div>
-						</div>
-												<div class="skill-block">
-							<div class="skill-label">Systèmes embarqués, électronique, robotique &amp; IoT</div>
-							<div class="skill-detail">Multisim · Arduino · Quartus Prime · VHDL · Proteus · ROS2 · iRobot Create3 · GSM</div>
+							<div class="skill-label">Authentification, chiffrement et PKI</div>
+							<div class="skill-detail">TLS/SSH · PKI · X.509 · AES · RSA (from scratch, Montgomery) · OpenPGP · Signatures numériques · Contrôle d'accès</div>
 						</div>
 						<div class="skill-block">
-							<div class="skill-label">DevOps &amp; Administration</div>
-							<div class="skill-detail">Docker · VM Ubuntu · GLPI · Git/GitLab · CI/CD · Agile/Scrum</div>
+							<div class="skill-label">Normes et cadres</div>
+							<div class="skill-detail">NIST CSF · ISO 27001 · ITIL · SAS 70 · IEC 62443 · Cyber Resilience Act · Règlement Machines · EN 50742 · TARA · OWASP Top 10</div>
 						</div>
 						<div class="skill-block">
-							<div class="skill-label">Programmation</div>
-							<div class="skill-detail">Python · C/C++ · Java · Bash · Node.js · Vue.js · MySQL · MongoDB</div>
+							<div class="skill-label">Sécurité offensive</div>
+							<div class="skill-detail">Tests d'intrusion web · Kali Linux · OWASP Top 10 (XSS, SQLi) · MITM · ARP spoofing · Scapy · Hack The Box · WebGoat</div>
+						</div>
+						<div class="skill-block">
+							<div class="skill-label">Systèmes, automatisation et programmation</div>
+							<div class="skill-detail">Linux (Debian, Ubuntu, Kali) · Bash · Python · C/C++ · Java · Docker · Git/GitLab · Jenkins (CI/CD) · GLPI · Agile/Scrum</div>
+						</div>
+						<div class="skill-block">
+							<div class="skill-label">Systèmes embarqués, robotique et IoT</div>
+							<div class="skill-detail">Contrôleurs robot industriels (CS9) · ROS 2 · iRobot Create3 · Arduino · VHDL · Quartus Prime · Proteus · Multisim</div>
 						</div>
 
 						<h3 style="margin-top:2rem;">Savoir-être</h3>
 						<div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.4rem;">
-							<span class="terminal-tag">Communication claire</span>
-							<span class="terminal-tag">Multi-sujets sans panique</span>
+							<span class="terminal-tag">Communication claire sous pression</span>
+							<span class="terminal-tag">Rigueur et précision</span>
+							<span class="terminal-tag">Autonomie et prise d'initiative</span>
 							<span class="terminal-tag">Travail en équipe</span>
-							<span class="terminal-tag">Rigueur &amp; organisation</span>
-							<span class="terminal-tag">Résistance à la pression</span>
-							<span class="terminal-tag">Curiosité active</span>
+							<span class="terminal-tag">Veille technique active</span>
 						</div>
 					</div>
 				</section>
@@ -414,10 +463,10 @@
 						<h3>Projets</h3>
 
 						<div class="project-card">
-							<h4>Déploiement IDS - Mission bénévole (Togo)</h4>
-							<p>Déploiement et configuration de Suricata sur un réseau local réel. Détection d'activités suspectes via scénarios d'attaque (scan, brute force). Visualisation des logs avec ELK Stack / Grafana et rédaction de rapports de sécurité.</p>
+							<h4>Architecture réseau sécurisée (Cisco PT / Linux / FreeBSD)</h4>
+							<p>Conception et administration complète d'une infrastructure réseau : VLAN, IPv6, adressage IP, routage, DNS, QoS et gestion des tables de routage.</p>
 							<div class="tags">
-								<span class="tag">Suricata</span><span class="tag">ELK Stack</span><span class="tag">Grafana</span><span class="tag">Wireshark</span><span class="tag">Nmap</span><span class="tag">Linux</span>
+								<span class="tag">Cisco PT</span><span class="tag">FreeBSD</span><span class="tag">VLAN</span><span class="tag">IPv6</span><span class="tag">QoS</span>
 							</div>
 						</div>
 
@@ -430,10 +479,10 @@
 						</div>
 
 						<div class="project-card">
-							<h4>Architecture réseau sécurisée (Cisco PT / Linux / FreeBSD)</h4>
-							<p>Conception et administration complète d'une infrastructure réseau : VLAN, IPv6, adressage IP, routage, DNS, QoS et gestion des tables de routage.</p>
+							<h4>Simulation MITM (Home Lab)</h4>
+							<p>ARP spoofing, interception HTTPS et analyse du trafic TLS, puis étude des contre-mesures et des mécanismes de protection.</p>
 							<div class="tags">
-								<span class="tag">Cisco PT</span><span class="tag">FreeBSD</span><span class="tag">VLAN</span><span class="tag">IPv6</span><span class="tag">QoS</span>
+								<span class="tag">Scapy</span><span class="tag">Wireshark</span><span class="tag">ARP</span><span class="tag">TLS</span>
 							</div>
 						</div>
 
@@ -446,24 +495,11 @@
 						</div>
 
 						<div class="project-card">
-							<h4>Simulation MITM (Home Lab)</h4>
-							<p>ARP spoofing, interception HTTPS et analyse du trafic TLS. Étude des mécanismes de protection et des vecteurs d'attaque man-in-the-middle.</p>
-							<div class="tags">
-								<span class="tag">Scapy</span><span class="tag">Wireshark</span><span class="tag">ARP</span><span class="tag">TLS</span>
-							</div>
-						</div>
-
-						<div class="project-card">
 							<h4>Labs CTF — HTB / WebGoat / Gandalf / OverTheWire</h4>
 							<p>Exploitation de vulnérabilités OWASP Top 10 sur WebGoat/WebWolf. Machines actives et challenges réseau sur Hack The Box. Challenges de sécurité liés aux systèmes IA (Gandalf). Wargames Linux/Bash sur OverTheWire Bandit.</p>
 							<div class="tags">
 								<span class="tag">HackTheBox</span><span class="tag">WebGoat</span><span class="tag">OWASP</span><span class="tag">CTF</span><span class="tag">OverTheWire</span>
-							</div><!--
-							<div style="margin-top:0.8rem;">
-								<a href="https://profile.hackthebox.com/profile/019d777a-1af9-711b-9ee3-b54fe8528a1f" target="_blank" style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--teal2);border:1px solid rgba(8,145,178,0.3);padding:0.2rem 0.6rem;border-radius:3px;text-decoration:none;text-transform:uppercase;letter-spacing:0.05em;">
-									⚔ Voir profil HTB →
-								</a>
-							</div> -->
+							</div>
 						</div>
 
 						<div class="project-card">
@@ -476,53 +512,22 @@
 					</div>
 				</section>
 
-				<!-- EXPERIENCE -->
-				<section id="experience">
-					<div class="container">
-						<h3>Expériences</h3>
-
-						<div class="project-card">
-							<h4>Stage Déploiement IDS - Association AJVDEC, Togo &nbsp;<span style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--teal2);font-weight:400;">1,5 mois · En cours</span></h4>
-							<p>Mission bénévole de déploiement d'une solution de détection d'intrusion sur réseau local réel pour une association humanitaire et tech.</p>
-						</div>
-
-						<div class="project-card">
-							<h4>Stage Optimisation réseau - Projet EMC2, Labo UMR ESPACE &nbsp;<span style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--teal2);font-weight:400;">2 mois</span></h4>
-							<p>Analyse et modélisation de flux réseau urbain, algorithmes de routage (RO, QGIS). Réflexion sur la résilience et la segmentation des infrastructures réseau.</p>
-						</div>
-
-						<div class="project-card">
-							<h4>Entrepreneuriat - 24H pour entreprendre &nbsp;<span style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--teal2);font-weight:400;">2024 &amp; 2025</span></h4>
-							<p>Conception et pitch d'un projet innovant en équipe sous contrainte de temps. <strong style="color:var(--accent);">🏆 Prix Coup de Cœur - édition 2024.</strong></p>
-						</div>
-
-						<div class="project-card">
-							<h4>Service à la personne &nbsp;<span style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--teal2);font-weight:400;">2022 – présent</span></h4>
-							<p>Aide informatique avancée à domicile et soutien scolaire en mathématiques et informatique.</p>
-						</div>
-					</div>
-				</section>
-
 				<!-- CERTIFICATIONS -->
 				<section id="certifications">
 					<div class="container">
 						<h3>Certifications</h3>
 						<div class="cert-grid">
 							<div class="cert-item inprogress">
-								<div class="cert-icon">☁️</div>
-								<div><div class="cert-name">AWS Cloud Practitioner</div><div class="cert-status">Préparation active</div></div>
+								<div class="cert-icon">🌐</div>
+								<div><div class="cert-name">Cisco CCNA</div><div class="cert-status">En cours · prévue mi-novembre 2026</div></div>
 							</div>
 							<div class="cert-item inprogress">
 								<div class="cert-icon">🔒</div>
-								<div><div class="cert-name">AWS Security Specialty</div><div class="cert-status">Objectif 2026</div></div>
+								<div><div class="cert-name">CompTIA Security+</div><div class="cert-status">En cours · prévue mi-novembre 2026</div></div>
 							</div>
 							<div class="cert-item obtained">
 								<div class="cert-icon">✅</div>
 								<div><div class="cert-name">Intro to Cybersecurity - Cisco</div><div class="cert-status">Obtenue</div></div>
-							</div>
-							<div class="cert-item obtained">
-								<div class="cert-icon">✅</div>
-								<div><div class="cert-name">LanguageCert English B2</div><div class="cert-status">Obtenue</div></div>
 							</div>
 						</div>
 					</div>
@@ -533,8 +538,8 @@
 					<div class="container">
 						<h3>Contact</h3>
 						<p style="font-size:0.85rem;color:var(--muted);">
-							Disponible pour une alternance à Grenoble &amp; alentours à partir de septembre 2026.<br/>
-							N'hésitez pas à me contacter pour toute opportunité ou collaboration.
+							Disponible pour un poste en cybersécurité à partir de septembre 2027, en France ou au Canada.<br/>
+							Écrivez-moi pour toute opportunité ou collaboration.
 						</p>
 						<div id="cf-wrapper">
 							<div class="row gtr-uniform">
@@ -544,8 +549,8 @@
 								<div class="col-12"><textarea id="cf-message" placeholder="Message" rows="5"></textarea></div>
 								<div class="col-12">
 									<ul class="actions">
-										<li><button onclick="cfSubmit()" style="cursor:pointer;font-family:'Space Mono',monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;border-radius:4px;background:var(--teal);border:1px solid var(--teal);color:#fff;padding:0.7em 1.4em;">Envoyer</button></li>
-										<li><button onclick="cfReset()" style="cursor:pointer;font-family:'Space Mono',monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;border-radius:4px;background:transparent;border:1px solid var(--muted);color:var(--muted);padding:0.7em 1.4em;">Effacer</button></li>
+										<li><button type="button" onclick="cfSubmit(this)" style="cursor:pointer;font-family:'Space Mono',monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;border-radius:4px;background:var(--teal);border:1px solid var(--teal);color:#fff;padding:0.7em 1.4em;">Envoyer</button></li>
+										<li><button type="button" onclick="cfReset()" style="cursor:pointer;font-family:'Space Mono',monospace;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.1em;border-radius:4px;background:transparent;border:1px solid var(--muted);color:var(--muted);padding:0.7em 1.4em;">Effacer</button></li>
 									</ul>
 								</div>
 							</div>
@@ -560,7 +565,7 @@
 				<div class="container">
 					<ul class="copyright">
 						<li style="font-family:'Space Mono',monospace;font-size:0.68rem;color:var(--muted);">
-							Amel SEKOUANE &copy; 2025 &nbsp;·&nbsp; Design adapté de <a href="http://html5up.net">HTML5 UP</a>
+							Amel SEKOUANE &copy; 2026 &nbsp;·&nbsp; Design adapté de <a href="http://html5up.net">HTML5 UP</a>
 						</li>
 					</ul>
 				</div>
@@ -581,11 +586,10 @@
 			document.getElementById('cf-email').value = '';
 			document.getElementById('cf-subject').value = '';
 			document.getElementById('cf-message').value = '';
-			var msg = document.getElementById('cf-msg');
-			msg.style.display = 'none';
+			document.getElementById('cf-msg').style.display = 'none';
 		}
 
-		function cfSubmit() {
+		function cfSubmit(btn) {
 			var name    = document.getElementById('cf-name').value.trim();
 			var email   = document.getElementById('cf-email').value.trim();
 			var subject = document.getElementById('cf-subject').value.trim();
@@ -595,11 +599,10 @@
 			if (!name || !email || !message) {
 				msg.style.display = 'block';
 				msg.style.color = '#e74c3c';
-				msg.textContent = '⚠ Merci de remplir au minimum le nom, l'email et le message.';
+				msg.textContent = "⚠ Merci de remplir au minimum le nom, l'email et le message.";
 				return;
 			}
 
-			var btn = event.target;
 			btn.disabled = true;
 			btn.textContent = 'Envoi...';
 
