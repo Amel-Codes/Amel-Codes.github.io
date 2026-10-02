@@ -4,7 +4,7 @@
 		<title>Amel SEKOUANE - Cybersécurité, détection et conformité</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Amel SEKOUANE,  ingénieure cybersécurité en alternance chez Stäubli Robotics. Etudiante en M2 Cybersécurité et informatique légale (Université Grenoble Alpes)." />
+		<meta name="description" content="Amel SEKOUANE, étudiante en M2 Cybersécurité et informatique légale (Université Grenoble Alpes), ingénieure cybersécurité en alternance chez Stäubli Robotics." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -206,6 +206,9 @@
 			.project-card ul { font-size: 0.81rem; color: var(--muted); line-height: 1.6; margin: 0 0 0.75rem; padding-left: 1.1rem; }
 			.project-card ul li { margin-bottom: 0.25rem; }
 			.job-meta { font-family: 'Space Mono', monospace; font-size: 0.68rem; color: var(--teal2); font-weight: 400; }
+			.tech-group { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0.3rem 0.8rem; align-items: start; margin-top: 0.55rem; }
+			.tech-group .tech-label { font-size: 0.74rem; color: var(--white); padding-top: 0.12rem; }
+			@media (max-width: 736px) { .tech-group { grid-template-columns: 1fr; } }
 
 			.tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
 			.tag {
@@ -329,9 +332,9 @@
 						<div class="about-grid">
 							<div class="info-pill">
 								<strong>Poste actuel</strong>
-								Ingénieure cybersécurité - Robotique (alternance)<br/>
+								Ingénieure cybersécurité – Robotique (alternance)<br/>
 								Stäubli Robotics, Faverges<br/>
-								Septembre 2026 - septembre 2027
+								Septembre 2026 – septembre 2027
 							</div>
 							<div class="info-pill">
 								<strong>Disponibilité</strong>
@@ -340,8 +343,8 @@
 							</div>
 							<div class="info-pill">
 								<strong>Formation</strong>
-								M2 Cybersécurité &amp; Informatique légale - Univ. Grenoble Alpes<br/>
-								Licence Informatique - Univ. Avignon <br/>
+								M2 Cybersécurité &amp; Informatique légale - Univ. Grenoble Alpes - Top 15 %<br/>
+								Licence Informatique - Univ. Avignon - Top 20 %<br/>
 								Cycle préparatoire d'ingénieurs - ESI Algérie
 							</div>
 							<div class="info-pill">
@@ -359,47 +362,69 @@
 						<h3>Expériences</h3>
 
 						<div class="project-card">
-							<h4>Ingénieure cybersécurité - Robotique (alternance) &nbsp;<span class="job-meta">Sept. 2026 - sept. 2027</span></h4>
+							<h4>Ingénieure cybersécurité – Robotique (alternance) &nbsp;<span class="job-meta">Sept. 2026 – sept. 2027</span></h4>
 							<p>Stäubli Robotics, R&amp;D Logiciels embarqués · Faverges, France</p>
 							<ul>
-								<li>Analyse des exigences de cybersécurité (IEC 62443-4-1 et 4-2, Cyber Resilience Act, Règlement Machines, EN 50742) et identification des écarts sur le logiciel embarqué du contrôleur robot CS9 (Linux Debian temps réel), puis mise en œuvre des corrections.</li>
-								<li>Travail au sein d'une équipe soumise au dispositif de réponse rapide aux vulnérabilités exigé par le CRA : le scan automatisé que je contribue à mettre en place alimente ce processus.</li>
+								<li>Analyse des exigences de cybersécurité applicables au contrôleur robot CS9 et à son logiciel embarqué SRC (Linux Debian temps réel, cycle de 1 ms), identification des écarts et mise en œuvre des corrections.</li>
+								<li>Participation à une analyse de risques (TARA) selon la méthode zones et conduits de l'IEC 62443 : découpage du contrôleur en zones (interfaces réseau, applicatif, safety, matériel temps réel, administration), niveaux de sécurité cibles (SL-T) et identification des écarts.</li>
+								<li>Analyse de la sécurité matérielle du contrôleur : interfaces de débogage, composants programmables, bus de terrain, supports de stockage et ports physiques, avec les exigences de démarrage sécurisé, de mises à jour signées et de chaîne de confiance.</li>
+								<li>Scans de vulnérabilités authentifiés sur équipement industriel, en conditions OT maîtrisées (faible intensité, tests intrusifs exclus), et évaluation comparative de trois scanners : OpenVAS, Nessus et Rapid7 Nexpose / InsightVM.</li>
+								<li>Contribution à l'intégration d'un scan automatisé dans une chaîne CI Jenkins, qui alimente le dispositif de réponse rapide aux vulnérabilités exigé par le CRA.</li>
 								<li>Durcissement du contrôleur : règles de pare-feu Linux en entrée et en sortie, contrôle d'accès aux services et aux interfaces réseau.</li>
-								<li>Scans de vulnérabilités authentifiés avec OpenVAS en conditions OT maîtrisées, évaluation comparative de scanners (OpenVAS, Nessus, Nexpose) et intégration dans une chaîne CI Jenkins.</li>
-								<li>Suivi des vulnérabilités produit (veille CERT-FR, analyse d'impact des CVE) et participation à une analyse de risques TARA par zones et conduits.</li>
+								<li>Suivi des vulnérabilités produit : veille CERT-FR, analyse d'impact des CVE, y compris sur les composants tiers embarqués.</li>
 							</ul>
-							<div class="tags">
-								<span class="tag">IEC 62443</span><span class="tag">EN 50742</span><span class="tag">ISO 27001</span><span class="tag">NIST</span><span class="tag">CRA</span><span class="tag">OpenVAS-Nessus-InsightVM</span><span class="tag">Jenkins</span><span class="tag">Linux</span><span class="tag">C++</span><span class="tag">TARA</span><span class="tag">Burp Suite, Wireshark</span>
+							<div class="tech-group">
+								<span class="tech-label">Normes et réglementation</span>
+								<div class="tags"><span class="tag">IEC 62443-4-1</span><span class="tag">IEC 62443-4-2</span><span class="tag">IEC 62443-3-2</span><span class="tag">Cyber Resilience Act</span><span class="tag">Règlement Machines</span><span class="tag">EN 50742</span><span class="tag">NIS2</span></div>
+								<span class="tech-label">Sécurité matérielle</span>
+								<div class="tags"><span class="tag">JTAG</span><span class="tag">FPGA</span><span class="tag">DSP</span><span class="tag">CPLD</span><span class="tag">EtherCAT</span><span class="tag">CFast</span><span class="tag">USB</span><span class="tag">Secure boot</span><span class="tag">Firmware signé</span><span class="tag">Anti-rollback</span><span class="tag">Chaîne de confiance</span></div>
+								<span class="tech-label">Vulnérabilités</span>
+								<div class="tags"><span class="tag">OpenVAS</span><span class="tag">Nessus</span><span class="tag">Nexpose / InsightVM</span><span class="tag">CVE</span><span class="tag">CERT-FR</span></div>
+								<span class="tech-label">Analyse de risques</span>
+								<div class="tags"><span class="tag">TARA</span><span class="tag">Zones et conduits</span><span class="tag">SL-T</span><span class="tag">DMZ industrielle</span></div>
+								<span class="tech-label">Systèmes et outils</span>
+								<div class="tags"><span class="tag">Linux Debian temps réel</span><span class="tag">C++</span><span class="tag">VAL 3</span><span class="tag">Stäubli Robotics Suite</span><span class="tag">OPC UA</span><span class="tag">SSH</span><span class="tag">HTTPS</span><span class="tag">Jenkins</span><span class="tag">Bash</span><span class="tag">Git</span></div>
 							</div>
 						</div>
 
 						<div class="project-card">
-							<h4>Stage - Déploiement IDS/IPS &nbsp;<span class="job-meta">Mai - juin 2026</span></h4>
+							<h4>Stage – Déploiement IDS/IPS &nbsp;<span class="job-meta">Mai – juin 2026</span></h4>
 							<p>Association AJVDEC, mission bénévole · Togo</p>
 							<ul>
 								<li>Déploiement et configuration de Suricata sur le réseau local réel de l'association, création et ajustement de règles de détection.</li>
 								<li>Simulation de scénarios d'attaque (scan, brute force) pour valider la détection d'activités suspectes.</li>
 								<li>Centralisation et visualisation des alertes avec ELK Stack et Grafana, rédaction de rapports de sécurité.</li>
 							</ul>
-							<div class="tags">
-								<span class="tag">Suricata</span><span class="tag">ELK Stack</span><span class="tag">Grafana</span><span class="tag">Wireshark</span><span class="tag">Nmap</span>
+							<div class="tech-group">
+								<span class="tech-label">Détection</span>
+								<div class="tags"><span class="tag">Suricata</span><span class="tag">IDS/IPS</span><span class="tag">Règles de détection</span></div>
+								<span class="tech-label">Supervision (SIEM)</span>
+								<div class="tags"><span class="tag">Elasticsearch</span><span class="tag">Logstash</span><span class="tag">Kibana</span><span class="tag">Grafana</span></div>
+								<span class="tech-label">Tests et analyse</span>
+								<div class="tags"><span class="tag">Nmap</span><span class="tag">Wireshark</span><span class="tag">Scan de ports</span><span class="tag">Brute force</span></div>
+								<span class="tech-label">Systèmes</span>
+								<div class="tags"><span class="tag">Linux</span><span class="tag">Réseau local</span><span class="tag">Rapports de sécurité</span></div>
 							</div>
 						</div>
 
 						<div class="project-card">
-							<h4>Stage - Optimisation réseau (projet EMC2) &nbsp;<span class="job-meta">2 mois</span></h4>
+							<h4>Stage – Optimisation réseau (projet EMC2) &nbsp;<span class="job-meta">2 mois</span></h4>
 							<p>Laboratoire UMR ESPACE · Avignon, France</p>
 							<p>Analyse et modélisation de flux réseau, algorithmes de routage. Réflexion sur la résilience et la segmentation des infrastructures réseau.</p>
+							<div class="tech-group">
+								<span class="tech-label">Méthodes et outils</span>
+								<div class="tags"><span class="tag">Recherche opérationnelle</span><span class="tag">Algorithmes de routage</span><span class="tag">Théorie des graphes</span><span class="tag">QGIS</span></div>
+							</div>
 						</div>
 
 						<div class="project-card">
-							<h4>Assistance informatique à domicile &nbsp;<span class="job-meta">2022 - aujourd'hui</span></h4>
+							<h4>Assistance informatique à domicile &nbsp;<span class="job-meta">2022 – aujourd'hui</span></h4>
 							<p>Micro-entreprise · France</p>
 							<p>Dépannage, configuration et sécurisation de postes et de réseaux domestiques pour des particuliers.</p>
 						</div>
 
 						<div class="project-card">
-							<h4>Entrepreneuriat - 24 h pour entreprendre &nbsp;<span class="job-meta">2024 &amp; 2025</span></h4>
+							<h4>Entrepreneuriat – 24 h pour entreprendre &nbsp;<span class="job-meta">2024 &amp; 2025</span></h4>
 							<p>Conception et pitch d'un projet innovant en équipe sous contrainte de temps. <strong style="color:var(--accent);">Prix Coup de cœur, édition 2024.</strong></p>
 						</div>
 					</div>
@@ -488,7 +513,7 @@
 
 						<div class="project-card">
 							<h4>Cryptographie &amp; sécurité des données (from scratch)</h4>
-							<p>Implémentation RSA 2048 bits en Python sans bibliothèques externes (Montgomery multiplication). PKI complète : certificats X.509, signatures numériques, chaîne de confiance. Étude et simulation d'attaques sur fonctions de hachage (Merkle-Damgård, collisions, seconde préimage).</p>
+							<p>Implémentation RSA 2048 bits en Python sans bibliothèques externes (Montgomery multiplication). PKI complète : certificats X.509, signatures numériques, chaîne de confiance. Étude et simulation d'attaques sur fonctions de hachage (Merkle–Damgård, collisions, seconde préimage).</p>
 							<div class="tags">
 								<span class="tag">Python</span><span class="tag">RSA</span><span class="tag">PKI</span><span class="tag">X.509</span><span class="tag">GPG</span>
 							</div>
